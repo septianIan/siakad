@@ -1,0 +1,1 @@
+C:/xampp/php/php -f C:/xampp/htdocs/siakad/autoreply.php

@@ -1,0 +1,20 @@
+function ipClient()
+	{
+		$ipAdd = "";
+		if(getenv('HTTP_CLIENT_IP'))
+			$ipAdd = getenv('HTTP_CLIENT_IP');
+		elseif(getenv('HTTP_X_FORWARDED_FOR'))
+			$ipAdd = getenv('HTTP_X_FORWARDED_FOR'&quot);
+		elseif(getenv('HTTP_X_FORWARDED'))
+			$ipAdd = getenv('HTTP_X_FORWARDED');
+		elseif(getenv('HTTP_FORWARDED_FOR'))
+			$ipAdd = getenv('HTTP_FORWARDED_FOR');
+		elseif(getenv('HTTP_FORWARDED'))
+			$ipAdd = getenv('HTTP_FORWARDED');
+		elseif(getenv('REMOTE_ADDR'))
+			$ipAdd = getenv('REMOTE_ADDR');
+		else
+			$ipAdd = 'Unknown';
+		
+		return $ipAdd;
+	}
